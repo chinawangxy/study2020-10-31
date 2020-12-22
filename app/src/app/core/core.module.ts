@@ -25,7 +25,7 @@ registerLocaleData(zh);
     PagesModule,
     AppRoutingModule,
   ],
-  exports: [ShareModule],
+  exports: [ShareModule, PagesModule, AppRoutingModule],
   providers: [{ provide: NZ_I18N, useValue: zh_CN }],
 })
 export class CoreModule {

@@ -1,8 +1,11 @@
-import { NgModule } from '@angular/core';
+import { InjectionToken, NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+
+export const API_CONFIG = new InjectionToken<string>('ApiConfigToken');
 
 @NgModule({
   declarations: [],
   imports: [CommonModule],
+  providers: [{ provide: API_CONFIG, useValue: 'http://localhost:3000' }],
 })
 export class ServicesModule {}
